@@ -24,7 +24,7 @@ for i in range(10):
         cursor.execute("UPDATE Users SET balance = ? WHERE id = ?", (500, i))
 
     if i % 3 == 0:
-        cursor.execute("DELETE FROM User WHERE username = ?", ("User1", ))
+        cursor.execute("DELETE FROM Users WHERE username = ?", (f"User{i}", ))
 
 connection.commit()
 connection.close()
